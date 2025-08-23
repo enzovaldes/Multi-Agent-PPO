@@ -1,0 +1,24 @@
+#Ejecutar con python@3.10
+#Para macos brew install python@3.10
+#/opt/homebrew/bin/python3.10 -m venv .venv
+#source .venv/bin/activate
+
+
+# Librerías base
+numpy #dependencia de pandas
+pandas #ok por colab
+matplotlib #ok por colab
+
+# Entornos multiagente
+pettingzoo[butterfly]==1.24.3 #ok
+supersuit==3.9.3 #ok
+
+# RL con PPO
+stable-baselines3==2.3.2 #ok
+torch>=2.0.0 #dependencia de stable-baselines3
+gymnasium==0.29.1 #dependencia de stable-baselines3
+
+# Visualización y utils
+tqdm
+# Render local (necesario si usarás render_mode="human")
+pygame #falta
