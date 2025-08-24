@@ -20,7 +20,7 @@ Se entrena PPO en knights_archers_zombies_v10 y se evalúa con 20 juegos tras ca
 - **Python**: 3.10.18
 - Pre-requisitos y modo de ejecución.
   - `python3.10 -m venv venv`
-  - `source .venv/bin/activate`
+  - `source venv/bin/activate`
   - `pip install -r requirements.txt`
 
 - **Ejecución**
