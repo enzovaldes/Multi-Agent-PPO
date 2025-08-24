@@ -1,7 +1,16 @@
-# Tarea 2 – Parte 1: Multi-Agent PPO en Knights-Archers-Zombies (PettingZoo)
+# SIMULACIÓN BASADA EN AGENTES Sec.2 FIC
+
+# Alumnos:
+
+# Enzo Valdés
+# Jorge Martinez
+# Cesar Bustamantes
+# Cristian Arroyo
+
+# Parte 1: Multi-Agent PPO en Knights-Archers-Zombies (PettingZoo)
 
 ## Contexto
-El código se ejecuta **en local** usando **Python 3.10.18** y reproduce el notebook de clase adaptado a script.  
+El código se ejecuta **en local** usando **Python 3.10.18** y reproduce el notebook de clase adaptado a los enunciados propuestos.  
 Se entrena PPO en knights_archers_zombies_v10 y se evalúa con 20 juegos tras cada entrenamiento.
 
 ---
@@ -40,7 +49,7 @@ En los resultados detallados por agente se observó que las recompensas proviene
 
 ---
 
-# Tarea 2 – Parte 2: Variación de cantidad de arqueros y caballeros en KAZ (PettingZoo)
+# Parte 2: Variación de cantidad de arqueros y caballeros en KAZ (PettingZoo)
 
 Este experimento reutiliza el código de la Parte 1 y evalúa el desempeño del sistema multiagente (PPO) en **Knights-Archers-Zombies (KAZ)** al **modificar la cantidad de arqueros y caballeros**, usando como presupuesto de entrenamiento los **100,000 steps** identificados como mejores en la Parte 1.  
 Tras cada entrenamiento se **evalúan 20 juegos** y se calcula la recompensa promedio.
@@ -88,3 +97,28 @@ Conclusiones:
 
 En todos los escenarios los arqueros concentran prácticamente toda la recompensa, mientras que los caballeros mantienen valores nulos o muy bajos.
 Por lo tanto, los arqueros son los agentes más efectivos para repeler zombies.
+
+---
+
+# Parte 3: PPO en Cooperative Pong v5 (PettingZoo)
+
+Este experimento adapta el pipeline de entrenamiento de la Parte 1 al entorno cooperativo **Cooperative Pong v5** de PettingZoo.  
+Se entrena un modelo PPO con observación visual (grises + resize 84×84 + frame stacking) y se evalúa en **20 juegos** para medir la recompensa alcanzada por el sistema multiagente.
+
+- **Ejecución**
+
+  - `python parte_3.py`
+
+  	•	Recompensa promedio global (20 juegos): 41.40
+	•	Promedio por agente, por juego:
+	•	paddle_0: 2.07
+	•	paddle_1: 2.07
+
+**Preguntas:**
+
+Se observa que ambos agentes cooperativos (las dos paletas) reciben recompensas similares, lo que indica que el modelo logra un comportamiento simétrico en el entorno.
+
+Conclusión – Parte 3
+
+El modelo PPO entrenado en Cooperative Pong v5 alcanzó un desempeño promedio de 41.4 puntos acumulados en 20 juegos, distribuidos equitativamente entre los dos agentes.
+Esto refleja un comportamiento cooperativo efectivo en el que ambos agentes contribuyen de manera balanceada al objetivo de mantener la pelota en juego. Ambos agentes (paddle_0 y paddle_1) recibieron prácticamente la misma recompensa, lo que muestra que el comportamiento aprendido fue cooperativo y simétrico.
