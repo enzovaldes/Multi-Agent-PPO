@@ -2,10 +2,10 @@
 
 # Alumnos:
 
-# Enzo Valdés
-# Jorge Martinez
-# Cesar Bustamantes
-# Cristian Arroyo
+## Enzo Valdés
+## Jorge Martinez
+## Cesar Bustamantes
+## Cristian Arroyo
 
 # Parte 1: Multi-Agent PPO en Knights-Archers-Zombies (PettingZoo)
 
